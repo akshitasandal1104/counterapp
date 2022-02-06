@@ -1,0 +1,10 @@
+# We also can define three different environment's and default setting also. And we can use ENV variables to protect the creds.
+development:
+  adapter: postgresql
+  database: ENV["DATABASE_NAME"]%>
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: <%= ENV["USERNAME"]%>
+  password: <%= ENV["PASSWORD"]%>
+  host: <%= ENV["HOST"]%>
